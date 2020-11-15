@@ -89,8 +89,10 @@ def compare(comp_month):
         percent = (1 - (month_amount / comp_month_amount)) * 100
         print('\nSo far your spending is down',str(percent) + '% this month compared to', comp_month)
 def total (budget):
-    print("\nYour total budget is", budget)
 
+    print("\nYour total budget is $", budget)
+    return budget 
+    
 #Welcome message
 print("\nWelcome to MyMoney Expense Tracker!")
 print("This app allows you to record and view your spending habits to help you become a more conscious spender!")
@@ -107,7 +109,7 @@ while True:
             print('Database initialized')
         elif ans == "2":
             cost = input('What is the amount of the expense?\n:')
-            cat = input('What is the category of the expense?\n:').title()
+            cat = input('What is the category of the expense?\n1 - Food\n2 - Entertainment\n3 - Education\n4 - Travel\n5 - Car\n6 - Utilities\n7 - Insuranece\n8 - Other\n:').title()
             msg = input('What is the expense for?\n:')
             log(cost,cat,msg)
         elif ans == "3":
@@ -119,8 +121,11 @@ while True:
             comp_month = input('\nWhat month would you like to compare this months spending to? (yyyy-mm)\n:')
             compare(comp_month)
         elif ans == "5":
-            budget= input("How much do you have in total?")
+            budget= input("What is your total budget?")
             total(budget)
+            if total_amount < budget:
+                print("You are over your budget my friend. Start saving!")
+                
         elif ans.lower() == "q":
             print('Goodbye!\n')
             break
