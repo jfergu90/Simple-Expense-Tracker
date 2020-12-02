@@ -62,13 +62,19 @@ def view(category, date,total):
         print(expense)
     print('\nTotal:','$' + str(total_amount))
     newbudget = int(total)- int(total_amount)  
+    print("Your new balance is $", newbudget)
     if int(total_amount) > int(total):
-        print ("You have", newbudget, "left")
         print ("You are under budget. Please save your money or else you will go bankrupt! I am serious")
     if int(newbudget) < 500:
         print("You are under $500, please try to save more money")
     elif int(newbudget) > 500:
-        print(" You balance is more than $", newbudget, ". You are doing great. Try to save more  :) ")
+        print("Your balance is more than $", newbudget, ". You are doing great. Try to save more  :) ")
+    elif int(newbudget) > 1000:
+        print("Your balance is more than $ 1000. You are doing great. Try to save more  :) ") 
+    elif int(newbudget) > 1500:
+        print("Your balance is more than $ 1500. You are doing great. Try to save more  :) ")
+    elif int(newbudget) > 2000:
+        print("Your balance is more than $ 2000. You are doing great. Try to save more  :) ")
     else:
         print()
 #Fuction for comparing current months spending to a month selected by the user
