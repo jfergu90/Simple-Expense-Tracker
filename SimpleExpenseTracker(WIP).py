@@ -112,7 +112,7 @@ print("This app allows you to record and view your spending habits to help you b
 total= input("What is your current total budget?\n:")
 while True:
         print("\nWhat would you like to do?")
-        print("1 - Initialize an expense database(only do this once)\n2 - Enter an expense\n3 - View expenses based on date and category\n4 - Update on spending for the month\nQ - Quit")
+        print("1 - Initialize an expense database(only do this once)\n2 - Enter an expense\n3 - View expenses based on date and category\n4 - Update on spending for the month\n5 - Update balance\nQ - Quit")
         ans = input(":")
         print()
 
@@ -132,6 +132,8 @@ while True:
         elif ans == "4":
             comp_month = input('\nWhat month would you like to compare this months spending to? (yyyy-mm)\n:')
             compare(comp_month)
+        elif ans == "5":
+            total= input("What is your current total budget?\n:")
 
                 
         elif ans.lower() == "q":
