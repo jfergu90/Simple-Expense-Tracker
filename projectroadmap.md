@@ -21,7 +21,7 @@ should have read the code and attempted to run it yourself.
 
       -I have created a README and projectroadmap.md to keep in track of my idea and my project roadmap. 
   
-[Work-in-progress] 5. Review the python code from the references
+[Done] 5. Review the python code from the references
 
       -I have ran the code and saw some features. There is a feature where I can record my expense that asks me to include the category and the reason behind the expense. My   expense was not recorded so I have to find out why. 
             -found out the reason why I could not record my expenses. I had to initialize an expense database first.  
