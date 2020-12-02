@@ -133,7 +133,7 @@ while True:
             comp_month = input('\nWhat month would you like to compare this months spending to? (yyyy-mm)\n:')
             compare(comp_month)
         elif ans == "5":
-            total= input("What is your current total budget?\n:")
+            total= input("What is your new balance?\n:")
 
                 
         elif ans.lower() == "q":
