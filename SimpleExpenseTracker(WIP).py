@@ -37,7 +37,7 @@ def log(amount, category, message=""):
         print('\nExpense not saved. Please try again and do not punctuate the category or detailed message.\n')
 
 #Function to view expenses based on a specific category or month/day
-def view(category, date,total):
+def view(category, date):
     conn = sqlite3.connect("spent.db")
     cur = conn.cursor()
     if category.isalpha():
