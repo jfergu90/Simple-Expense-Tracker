@@ -88,14 +88,14 @@ def compare(comp_month):
     else:
         percent = (1 - (month_amount / comp_month_amount)) * 100
         print('\nSo far your spending is down',str(percent) + '% this month compared to', comp_month)
-def analysis(allcate,tracker):
+def analysis():
     conn = sqlite3.connect("spent.db")
     cur = conn.cursor()
     sql = '''
-    select * from expenses where date like '{}%'
+    select * from expenses
     '''.format(tracker)
     sql2 = '''
-    select sum(amount) from expenses where date like '{}%'
+    select sum(amount) from expenses
     '''.format(tracker)
     cur.execute(sql)
     results = cur.fetchall()
@@ -151,12 +151,14 @@ while True:
             comp_month = input('\nWhat month would you like to compare this months spending to? (yyyy-mm)\n:')
             compare(comp_month)
         elif ans == "5":
-            allcate= ""
-            tracker = input('What month or day do you want to view? (yyyy-mm or yyyy-mm-dd)\n:')
-            analysis(allcate,tracker)
+            tracker= ""
+            analysis()
         elif ans == "6":
             total= input("What is your new balance?\n:")
-                
+            if total.isnumeric():
+                print("You now have $ ", total)
+            else:
+                total=input("Only in numbers please, \nWhat is your new balance?\n:")                
         elif ans.lower() == "q":
             print('Goodbye!\n')
             break
