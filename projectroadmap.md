@@ -29,6 +29,7 @@ should have read the code and attempted to run it yourself.
       -Had some thoughts on how to improve the code. I want to add a function where it will ask the user to insert their current total and when they ask for their expenses, it will tell them how much they have or do not. 
             -I added a new function. On the start of the expense code, it asks you to insert how many you have currently. 
             -I also improved my View Expense function. When I ask for my expense, it will also tell the user how much they have left or if they have overspent.
+                  --I moved some of the codes from function View to a new function called Analysis. It will tell users how much they have spent for the entire month and tell them their balance.
        
     
 [Done] 6. Run the code and see how it works
